@@ -1,0 +1,37 @@
+import {render} from "preact";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+// Dexie is used to store the acquisition and disposition records locally.
+import Dexie from 'dexie';
+import 'dexie-observable';
+import 'dexie-syncable';
+
+import Fuse from "fuse.js";
+
+import "./index.css";
+
+//
+
+// TODO: use Fuse for the inventory search
+const inventory = [
+  {
+    type: "rifle",
+    model: "700",
+    caliber_or_gauge: "308",
+    manufacturer: "remington",
+    serial_number: "123456",
+  }
+];
+const fuse = new Fuse(inventory, {
+  keys: ["type", "model", "caliber_or_gauge", "manufacturer", "serial_number"]
+});
+console.log(fuse.search("rem"));
+
+import {routes} from "./routes.tsx";
+
+const router = createBrowserRouter(routes);
+
+render(<RouterProvider router={router}/>, document.getElementById("app")!);
