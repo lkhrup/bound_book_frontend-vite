@@ -2,8 +2,8 @@ import {useState} from "preact/hooks";
 import {useForm} from "react-hook-form";
 import {Link} from "react-router-dom";
 import {uuidv7} from "uuidv7";
-import {Tabs} from "./Tabs.tsx";
-import {FormField} from "./FormField.tsx";
+import {Tabs} from "./ui/Tabs.tsx";
+import {FormField} from "./ui/FormField.tsx";
 
 export default function Acquisition() {
   const {

@@ -1,8 +1,8 @@
 import {useForm} from "react-hook-form";
 import {useState} from "preact/hooks";
 import {Link} from "react-router-dom";
-import {FormField} from "./FormField.tsx";
-import {Tabs} from "./Tabs.tsx";
+import {FormField} from "./ui/FormField.tsx";
+import {Tabs} from "./ui/Tabs.tsx";
 import {uuidv7} from "uuidv7";
 
 // TODO: The route should allow passing an acquisition ID and a transferee ID.
