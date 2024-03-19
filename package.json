@@ -27,7 +27,8 @@
     "uuidv7": "^0.6.3",
     "vite-plugin-node-polyfills": "^0.21.0",
     "vite-plugin-top-level-await": "^1.4.1",
-    "vite-plugin-wasm": "^3.3.0"
+    "vite-plugin-wasm": "^3.3.0",
+    "which-typed-array": "^1.1.15"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.1",
